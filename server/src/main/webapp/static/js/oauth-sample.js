@@ -2,7 +2,10 @@
 	var gBtn = $('.google-btn');
 	var tBtn = $('.twitter-btn');
 	gBtn.asEventStream('click').assign(function(){
-		$.get('/api/goauth');
+		$.ajax({
+			method: 'GET',
+			url: '/api/goauth'
+		});
 	});
 	tBtn.asEventStream('click').assign(function(){
 	});
